@@ -9,7 +9,7 @@ const pokemonList = [
     },
   ];
 
-/*function PokemonCard() {
+function PokemonCard() {
     const pokemon = pokemonList[0];
     return <figure>{pokemon.imgSrc === true ?
         <img src={pokemon.imgSrc} alt={pokemon.name} /> :
@@ -17,18 +17,6 @@ const pokemonList = [
          } 
         <figcaption>{pokemon.name}</figcaption>
     </figure>
-    }*/
-
-    function PokemonCard() {
-        const pokemon = pokemonList[0];
-        return <figure if (pokemon.imgSrc === true) {
-            <img src={pokemon.imgSrc} alt={pokemon.name} />
-        } else {
-             <p>???</p>
-             } >
-            <figcaption>{pokemon.name}</figcaption>
-        </figure>
-        }
-
+    }
 
 export default PokemonCard;
