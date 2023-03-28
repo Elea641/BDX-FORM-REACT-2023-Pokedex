@@ -11,9 +11,11 @@ function NavBar(props) {
     
     return (
         <nav>
-        <button onClick={handleClickNext}>Next</button>
-        {props.pokemonIndex > 0 ? 
-            <button onClick={handleClickBack}>Back</button> : <span></span>
+        {
+            props.pokemonIndex < props.pokemonList.length - 1 && <button onClick={handleClickNext} >Suivant</button>
+        }
+        {
+            props.pokemonIndex > 0 && <button onClick={handleClickBack} >Précedent</button>
         }
         </nav>
         )
