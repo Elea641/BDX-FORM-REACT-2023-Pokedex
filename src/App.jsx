@@ -32,14 +32,13 @@ function App() {
       },
     ];
 
-  const pokemon = pokemonList[0];
-  const [pokemonIndex, setCount] = useState(0);
+    const [pokemonIndexList, setPokemonIndexList] = useState(0);
+
 
   return (
     <div>
-      <NavBar pokemonIndex={pokemonIndex} setCount={setCount} pokemonList={pokemonList}/>
-      <p pokemonIndex={pokemonIndex}>{pokemonIndex}</p>
-      <PokemonCard pokemonList={pokemonList} pokemon={pokemon}/>
+      <NavBar pokemonIndexList={pokemonIndexList} setPokemonIndexList={setPokemonIndexList} pokemonList={pokemonList}/>
+      <PokemonCard pokemon={pokemonList[pokemonIndexList]}/>
     </div>
   )
 }
