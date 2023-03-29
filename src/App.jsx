@@ -1,7 +1,7 @@
 import './App.css'
 import MyTitle from "./components/MyTitle"
 import WeatherIcon from './components/WeatherIcon';
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import PokemonCard from './components/PokemonCard';
 import NavBar from './components/NavBar';
 
@@ -34,7 +34,12 @@ function App() {
 
     const [pokemonIndexList, setPokemonIndexList] = useState(0);
 
-
+    useEffect(
+      () => {
+        alert("hello pokemon trainer :)");
+      }, 
+      []
+      )
   return (
     <div>
       <NavBar pokemonIndexList={pokemonIndexList} setPokemonIndexList={setPokemonIndexList} pokemonList={pokemonList}/>
